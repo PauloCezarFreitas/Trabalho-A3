@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>MK Pagamento</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+    <body>
+        <div class="container">
+            <a href="index.html"><img src="mkshoes.png" class="center" height="90"></a>           
+            <h1>Processamento de compra!</h1>
+            <p>Para completar o processo, por favor, insira seu nome completo, endereço e forma de pagamento:</p>
+            <form action="#" method="POST" onsubmit="return exibirMensagem()">
+                <input type="text" name="nome_completo" placeholder="Nome Completo" required><br>
+                <input type="text" name="endereco" placeholder="Endereço" required><br>
+                <select name="forma_pagamento" required>
+                    <option value="" disabled selected>Selecione a forma de pagamento</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Boleto Bancário">Boleto Bancário</option>
+                    <option value="PIX">Pix</option>
+                </select><br>
+                <input type="submit" value="Confirmar Compra">
+            </form>
+            <div class="mensagem" id="mensagem" style="display:none;"></div>
+        </div>
+    
+        <script>
+            function exibirMensagem() {
+                var mensagemElement = document.getElementById("mensagem");
+                mensagemElement.style.display = "block";
+                mensagemElement.innerHTML = "Compra confirmada. Obrigado pela preferência!";
+                return false;
+            }
+        </script>
+         <div class="footer">
+            <p>Formas de pagamento aceitas:</p>
+            <div class="card-logo">
+                <img src="visa-removebg-preview.png">
+                <img src="master-removebg-preview.png" height="90px"> 
+                <img src="pixxx-removebg-preview.png">
+            </div>
+        </div>
+        <div class="mensagem" id="mensagem" style="display:none;"></div>
+    </div>
+</body>
+</html>
